@@ -126,4 +126,5 @@ document.addEventListener("DOMContentLoaded", function(){
           map: map
         });
       }
+  initMap();
 });
