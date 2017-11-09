@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", function(){
 	/* висота сторінки */
-  var scrollHeight = Math.max(
+  let scrollHeight = Math.max(
     document.body.scrollHeight, document.documentElement.scrollHeight,
     document.body.offsetHeight, document.documentElement.offsetHeight,
     document.body.clientHeight, document.documentElement.clientHeight
   );
 
   /* висота екрану */
-  var windowHeight = document.documentElement.clientHeight;
+  let windowHeight = document.documentElement.clientHeight;
 
   /* поточна прокрутка*/
-  var scrollСurrent = document.body.scrollTop || document.documentElement.scrollTop;
+  let scrollСurrent = document.body.scrollTop || document.documentElement.scrollTop;
 
   /* кнопка меню */
-  var menuIcon = document.querySelector(".menu-icon");
-  var menu = document.querySelector(".menu");
+  let menuIcon = document.querySelector(".menu-icon");
+  let menu = document.querySelector(".menu");
     menuIcon.addEventListener("click",function(){
       menuIcon.classList.toggle("menu-icon--open");
       menu.classList.toggle("menu--open");
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   /*перехід меню з position:static на fixed*/
   window.addEventListener("scroll",function(){
-    var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
       if(scrollTop > 30){
         menu.classList.add("menu-fixed");
         }
@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function(){
         }
 
       /* перемикання .active в пунктах меню*/
-    var containerPageAll = document.querySelectorAll(".container-page-js");
-      for (var i=0; i < containerPageAll.length; i++){
-        var coorContainerPage=containerPageAll[i].getBoundingClientRect();
+    let containerPageAll = document.querySelectorAll(".container-page-js");
+      for (let i=0; i < containerPageAll.length; i++){
+        let coorContainerPage=containerPageAll[i].getBoundingClientRect();
           if(coorContainerPage.top < windowHeight/2 && coorContainerPage.bottom > windowHeight/2){
             document.querySelector(".menu li.active").classList.remove("active");
             document.querySelectorAll(".menu li")[i].classList.add("active");
@@ -61,19 +61,19 @@ document.addEventListener("DOMContentLoaded", function(){
       }
   });
   /* подія для пунктів меню */
-  var menuLinkAll = document.querySelectorAll(".menu li a,.double-down");
-  var step =30;
-  for(var i = 0; i < menuLinkAll.length; i++){
+  let menuLinkAll = document.querySelectorAll(".menu li a,.double-down");
+  let step =30;
+  for(let i = 0; i < menuLinkAll.length; i++){
     menuLinkAll[i].addEventListener("click",function(event){
       menuIcon.classList.remove("menu-icon--open");
       menu.classList.remove("menu--open");
       event.preventDefault();
-      var href = this.getAttribute("href");
-      var coorHref = document.querySelector(href).getBoundingClientRect();
+      let href = this.getAttribute("href");
+      let coorHref = document.querySelector(href).getBoundingClientRect();
       if (coorHref.top > 0){
         function scrollDown(){
-          var scrollСurrent = window.pageYOffset || document.documentElement.scrollTop;
-          var coorHref = document.querySelector(href).getBoundingClientRect();
+          let scrollСurrent = window.pageYOffset || document.documentElement.scrollTop;
+          let coorHref = document.querySelector(href).getBoundingClientRect();
           if( 0 < coorHref.top && scrollСurrent !== scrollHeight - windowHeight){
             requestAnimationFrame(scrollDown);
             window.scrollTo(0,scrollСurrent+step);
@@ -95,14 +95,12 @@ document.addEventListener("DOMContentLoaded", function(){
       }
       else{
         function scrollUp(){
-          var scrollСurrent = window.pageYOffset || document.documentElement.scrollTop;
-          var coorHref = document.querySelector(href).getBoundingClientRect();
+          let scrollСurrent = window.pageYOffset || document.documentElement.scrollTop;
+          let coorHref = document.querySelector(href).getBoundingClientRect();
           if(0 > coorHref.top){
             requestAnimationFrame(scrollUp);
             window.scrollTo(0,scrollСurrent-step);
-                //console.log(coorHref.top+" "+"coorHref.top");
-                //console.log(scrollСurrent-step);
-                //console.log(scrollСurrent);
+                
           }
           else{
             window.scrollTo(0,scrollСurrent+coorHref.top);
