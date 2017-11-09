@@ -199,7 +199,7 @@ nav{
 	position:relative;
 	transition:all 1s linear;
 	width:calc(100% * 3);
-	animation-name:foto-move;
+	//animation-name:foto-move;
 	animation-timing-function:linear;
 	animation-duration:30s;
 	animation-fill-mode:both;
