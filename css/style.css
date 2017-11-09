@@ -97,7 +97,7 @@ nav{
 	text-transform:uppercase;
 	text-align:center;
 	order:1;
-	animation-name:home-title-visible;
+	//animation-name:home-title-visible;
 	animation-iteration-count:1;
 	animation-timing-function:linear;
 	animation-duration:1.2s;
@@ -128,7 +128,7 @@ nav{
 	position:relative;
 	margin-bottom:5px;
 	order:2;
-	animation-name:double-down--animation;
+	//animation-name:double-down--animation;
 	animation-duration:1s;
 	animation-iteration-count:infinite;
 }
