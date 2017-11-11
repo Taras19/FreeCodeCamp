@@ -357,6 +357,7 @@ footer .col span{
 		padding:0;
 		flex-direction:column;
 		justify-content:flex-start;
+		transition: left .5s;
 	}
 	.menu--open{
 		left:0;
