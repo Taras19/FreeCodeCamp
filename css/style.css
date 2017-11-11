@@ -246,6 +246,9 @@ nav{
 	opacity:0.6;
 
 }
+.portfolio-foto.portfolio-foto__touch{
+	opacity:1;
+}
 .see-more{
 	position:absolute;
 	bottom:10px;
