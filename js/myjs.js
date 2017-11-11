@@ -112,5 +112,10 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     });
   }
-  
+  let portfolioFotoAll = document.querySelectorAll(".portfolio-foto");
+  for (let i = 0; i < portfolioFotoAll.length; i++){
+  	if ('ontouchstart' in window) {
+  	  portfolioFotoAll[i].classList.add("portfolio-foto__touch");
+  	}
+  }
 });
