@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function(){
   for (let i = 0; i < portfolioContainerAll.length;i++){
     //console.log(i+" i");
     //console.log(listSrc.length+" listSrc.length");
-    for(let k =1; k<listSrc[i].length;k++){
+    for(let k =0; k<listSrc[i].length;k++){
       //console.log(listSrc[i].length+" listSrc[i].length");
       //console.log(k+" k");
       let portfolioFoto = document.createElement("img");
