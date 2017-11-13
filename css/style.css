@@ -354,14 +354,12 @@ footer .col span{
 		position:fixed;
 		top:0;
 		left:-200px;
-		//bottom:0;
-		height:100vh;
+		bottom:0;
 		width:200px;
 		background-color:black;
 		padding:0;
 		flex-direction:column;
 		justify-content:flex-start;
-		transition: left .5s;
 	}
 	.menu--open{
 		left:0;
@@ -425,6 +423,11 @@ footer .col span{
 		width:100%;
 		margin:0 0 15px 0;
 	}
+	.about-content,
+	.portfolio-content, 
+	.contact-content {
+        padding: 15px;
+    }
 	
 }
 
