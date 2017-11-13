@@ -160,5 +160,12 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     });
   }
-
+  
+  /* для мобільних opacity:1 */
+  if ('ontouchstart' in window) {
+    let portfolioFotoAll = document.querySelectorAll(".portfolio-foto");
+    for (let i = 0; i < portfolioFotoAll.length; i++) {
+      portfolioFotoAll[i].classList.add("portfolio-foto__touch");
+    }
+  }
 });
