@@ -110,6 +110,13 @@ document.addEventListener("DOMContentLoaded", function(){
       event.preventDefault();
       let href = this.getAttribute("href");
       let coorHref = document.querySelector(href).getBoundingClientRect();
+      /* висота сторінки, при першому оголошенні не всі картинки могли підвантажитись
+      тому розмір сторінки переоприділяю */
+      scrollHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+        );
       if (coorHref.top > 0){
         function scrollDown(){
           let scrollСurrent = window.pageYOffset || document.documentElement.scrollTop;
