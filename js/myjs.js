@@ -1,4 +1,4 @@
-document.querySelector("body").addEventListener("load", function(){
+document.addEventListener("DOMContentLoaded", function(){
   /**/
   let portfolioContainerAll = document.querySelectorAll(".portfolio-container");
   let listSrc = [
