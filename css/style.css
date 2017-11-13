@@ -51,7 +51,7 @@ nav{
 	margin:0;
 	list-style:none;
 	z-index:100;
-	transition:.5s;
+	transition:left .5s;
 }
 .menu-fixed{
 	position:fixed;
