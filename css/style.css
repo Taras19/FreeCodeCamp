@@ -332,7 +332,7 @@ nav{
   display:none;
 }
 footer{
-  font-size:calc(1.5rem+1vmin);
+  font-size:calc(1.5rem + 1vmin);
   font-weight:bold;
 }
 footer .col{
