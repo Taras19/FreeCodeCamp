@@ -1,5 +1,37 @@
 document.addEventListener("DOMContentLoaded", function(){
   /**/
+  let aboutContent = document.querySelector(".about-content");
+  let aboutFoto = document.createElement("img");
+  aboutFoto.src = "img/about_foto.jpg";
+  aboutFoto.alt = "My photo";
+  aboutFoto.classList.add("about-foto");
+  aboutContent.insertBefore(aboutFoto,aboutContent.children[1]);
+  
+  let containerTechnologiesAll = document.querySelectorAll(".container-technologies");
+  let listTechnologiesSrc = [
+    "img/html.png",
+    "img/css.png",
+    "img/javascript.png",
+    "img/jquery.png",
+    "img/boostrap.png",
+    "img/github.png"
+  ];
+  let listTechnologiesAlt = [
+    "html",
+    "css",
+    "javascript",
+    "jquery",
+    "boostrap",
+    "github"
+  ];
+  for ( let i = 0; i < containerTechnologiesAll.length; i++) {
+    let fotoTechnologies = document.createElement("img");
+    fotoTechnologies.src=listTechnologiesSrc[i];
+    fotoTechnologies.alt=listTechnologiesAlt[i];
+    fotoTechnologies.classList.add("foto-technologies");
+    containerTechnologiesAll[i].appendChild(fotoTechnologies);
+  }
+
   let portfolioContainerAll = document.querySelectorAll(".portfolio-container");
   let listSrc = [
     ["img/world_around_us/page-1.jpg",
