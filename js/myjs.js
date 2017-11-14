@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+window.addEventListener("pageshow", function(){
   /**/
   let aboutContent = document.querySelector(".about-content");
   let aboutFoto = document.createElement("img");
@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
   aboutFoto.alt = "My photo";
   aboutFoto.classList.add("about-foto");
   aboutContent.insertBefore(aboutFoto,aboutContent.children[1]);
-  
+
   let containerTechnologiesAll = document.querySelectorAll(".container-technologies");
   let listTechnologiesSrc = [
     "img/html.png",
@@ -70,6 +70,14 @@ document.addEventListener("DOMContentLoaded", function(){
       portfolioContainerAll[i].appendChild(portfolioFoto );
     }
   }
+
+  /* вставка карти*/
+  let body = document.querySelector("body");
+  let scriptMap = document.createElement("script");
+  scriptMap.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAi4qXRc7OLa21zTqg2m87lyx4GAkEnbO8&callback=initMap";
+  scriptMap.async = true;
+  scriptMap.defer = true;
+  body.insertBefore(scriptMap,body.lastElementChild);
 
 	/* висота сторінки */
   let scrollHeight = Math.max(
